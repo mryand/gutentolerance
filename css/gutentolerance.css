@@ -1,3 +1,261 @@
-body {
-background: red !important;
+
+/* Hide the "Preview" button */
+#editor.block-editor__container .editor-inserter-with-shortcuts, #editor.block-editor__container .editor-post-preview.is-button {
+	display: none !important;
 }
+
+#editor.block-editor__container .components-panel__row label[for^="post-author-selector"] {
+	color: transparent;
+	display: inline-block;
+}
+
+/* convert "Author" label to "Posted By" */
+#editor.block-editor__container .components-panel__row label[for^="post-author-selector"]&:before {
+	position: relative;
+	left: 0;
+	color: #555d66;
+	content: "Posted By";
+}
+
+/* add "Add Block" label to (+) icon */
+#editor.block-editor__container .editor-block-list__empty-block-inserter .editor-inserter:before,  #editor.block-editor__container .editor-default-block-appender .editor-inserter:before, #editor.block-editor__container .editor-inserter-with-shortcuts .editor-inserter:before {
+		content: "Add Block";
+		display: inline-block;
+		position: absolute;
+		left: -3px;
+		bottom: -2.7em;
+		text-align: center;
+}
+
+/* Outline and label the Page/Post Title field */
+#editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div {
+	outline: 1px solid rgba(145, 151, 162, 0.2);
+}
+#editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div:before {
+	position: absolute;
+	top: 4px;
+	right: -1px;
+	color: #fff;
+	background-color: rgba(145, 151, 162, 1);
+	font-size: 11px;
+	font-family: sans-serif;
+	font-weight: normal;
+	content: "Title";
+	box-sizing: border-box;
+	padding: 0 0.5em;
+	letter-spacing: 0.08em;
+	z-index: 0;
+}
+#editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div {
+	outline: 1px solid rgba(145, 151, 162, 0.2);
+}
+.post-type-wp_block #editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div:before {
+	content: "Block title";
+}
+.post-type-page #editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div:before {
+	content: "Page title";
+}
+.post-type-post #editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div:before {
+	content: "Post title";
+}
+#editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div.editor-post-permalink button:after {
+	content: "Permalink";
+	margin-left: 0.5em;
+}
+#editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div.editor-post-permalink:before {
+	content: "";
+}
+
+/* Label the content area */
+#editor.block-editor__container .editor-block-list__layout {
+	margin: 1.5em 0;
+	border-top: 1px dashed #e5e5e5;
+	border-bottom: 1px dashed #e5e5e5;
+}
+#editor.block-editor__container .editor-block-list__layout:after, #editor.block-editor__container .editor-block-list__layout:before {
+	content: "page content";
+	position: relative;
+	bottom: 0;
+	right: 0;
+	font-family: sans-serif;
+	font-size: 0.7em;
+	color: #aaa;
+}
+.block-editor-page #editor.block-editor__container .editor-block-list__layout:after {
+	content: "page content above here";
+}
+.block-editor-page #editor.block-editor__container .editor-block-list__layout:before {
+	content: "page content below here";
+}
+.block-editor-post #editor.block-editor__container .editor-block-list__layout:after {
+	content: "post content above here";
+}
+.block-editor-post #editor.block-editor__container .editor-block-list__layout:before {
+	content: "post content below here";
+}
+#editor.block-editor__container .editor-inner-blocks .editor-block-list__layout {
+	border: none;
+	margin: 0;
+}
+#editor.block-editor__container .editor-inner-blocks .editor-block-list__layout:after, #editor.block-editor__container .editor-inner-blocks .editor-block-list__layout:before {
+	content: '';
+}
+
+/* Add a visible outline to blocks at all times */
+#editor.block-editor__container .editor-block-list__layout .editor-block-list__block .editor-block-list__block-edit:before {
+	outline-color: rgba(145, 151, 162, 0.15);
+}
+
+/* Improve label on Publish/Update/Save button */
+#editor.block-editor__container .components-button.editor-post-publish-panel__toggle.is-button:after, #editor.block-editor__container .editor-post-publish-button.is-button:after {
+	content: "/Save Edits";
+}
+
+
+/* Clarify the "Document" label on the right-column tab in the Admin UI */
+.block-editor-page .edit-post-sidebar__panel-tab[data-label="Document"]:before {
+	content: "Page/";
+}
+
+.block-editor-post .edit-post-sidebar__panel-tab[data-label="Document"]:before {
+	content: "Post/";
+}
+
+/* Label the toolbar actions */
+.editor-inserter__toggle:after {
+	content:"Add Block";
+	margin-left:0.33em;
+}
+.editor-history__undo:after {
+	content:"Undo";
+	margin-left:0.33em;
+}
+.editor-history__redo:after {
+	content:"Redo";
+	margin-left:0.33em;
+}
+.editor-history__redo:after {
+	content:"Redo";
+	margin-left:0.33em;
+}
+.table-of-contents .components-icon-button:after {
+	content:"Stats";
+	margin-left:0.33em;
+}
+.table-of-contents .components-icon-button:after {
+	content:"Stats";
+	margin-left:0.33em;
+}
+.block-editor-block-navigation:after {
+	content:"Structure";
+	margin-left:0.33em;
+}
+
+/* Visible labels for blocks */
+.editor-block-list__block:after {
+	position:absolute;
+	top:0;
+	left: -7.25rem;
+	width: 5rem;
+	text-align: right;
+	font-size:0.67rem;
+	font-family:sans-serif;
+	opacity:0.67;
+}
+.editor-block-list__block[data-type="core/paragraph"]:after {
+	content:"Paragraph";
+}
+.editor-block-list__block[data-type="core/quote"]:after {
+	content:"Quote";
+}
+.editor-block-list__block[data-type="core/image"]:after {
+	content:"Image";
+}
+.editor-block-list__block[data-type="core/heading"]:after {
+	content:"Heading";
+}
+.editor-block-list__block[data-type="core/gallery"]:after {
+	content:"Gallery";
+}
+.editor-block-list__block[data-type="core/list"]:after {
+	content:"List";
+}
+.editor-block-list__block[data-type="core/audio"]:after {
+	content:"Audio";
+}
+.editor-block-list__block[data-type="core/cover"]:after {
+	content:"Cover";
+}
+.editor-block-list__block[data-type="core/file"]:after {
+	content:"File";
+}
+.editor-block-list__block[data-type="core/video"]:after {
+	content:"Video";
+}
+.editor-block-list__block[data-type="core/code"]:after {
+	content:"Code";
+}
+.editor-block-list__block[data-type="core/classic"]:after {
+	content:"Classic";
+}
+.editor-block-list__block[data-type="core/html"]:after {
+	content:"Custom HTML";
+}
+.editor-block-list__block[data-type="core/preformatted"]:after {
+	content:"Preformatted";
+}
+.editor-block-list__block[data-type="core/pullquote"]:after {
+	content:"Pullquote";
+}
+.editor-block-list__block[data-type="core/table"]:after {
+	content:"Table";
+}
+.editor-block-list__block[data-type="core/verse"]:after {
+	content:"Verse";
+}
+.editor-block-list__block[data-type="core/button"]:after {
+	content:"Button";
+}
+.editor-block-list__block[data-type="core/columns"]:after {
+	content:"Columns";
+}
+.editor-block-list__block[data-type="core/media-text"]:after {
+	content:"Media & Text";
+}
+.editor-block-list__block[data-type="core/more"]:after {
+	content:"More";
+}
+.editor-block-list__block[data-type="core/page-break"]:after {
+	content:"Page Break";
+}
+.editor-block-list__block[data-type="core/spacer"]:after {
+	content:"Spacer";
+}
+.editor-block-list__block[data-type="core/shortcode"]:after {
+	content:"Shortcode";
+}
+.editor-block-list__block[data-type="core/archives"]:after {
+	content:"Archives";
+}
+.editor-block-list__block[data-type="core/calendar"]:after {
+	content:"Calendar";
+}
+.editor-block-list__block[data-type="core/categories"]:after {
+	content:"Categories";
+}
+.editor-block-list__block[data-type="core/latest-comments"]:after {
+	content:"Latest Comments";
+}
+.editor-block-list__block[data-type="core/latest-posts"]:after {
+	content:"Latest Posts";
+}
+.editor-block-list__block[data-type="core/rss"]:after {
+	content:"RSS";
+}
+.editor-block-list__block[data-type="core/search"]:after {
+	content:"Search";
+}
+.editor-block-list__block[data-type="core/tag-cloud"]:after {
+	content:"Tag Cloud";
+}
+
