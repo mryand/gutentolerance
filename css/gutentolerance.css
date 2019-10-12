@@ -32,7 +32,7 @@
 	outline: 1px solid rgba(145, 151, 162, 0.2);
 }
 #editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div:before {
-	position: absolute;
+	/* position: absolute;
 	top: 4px;
 	right: -1px;
 	color: #fff;
@@ -44,7 +44,18 @@
 	box-sizing: border-box;
 	padding: 0 0.5em;
 	letter-spacing: 0.08em;
-	z-index: 0;
+	z-index: 0; */
+	
+	content: "Title";
+	color: #767676;
+	position:absolute;
+	top:2em;
+	left: -7.25rem;
+	width: 5rem;
+	text-align: right;
+	font-size:0.67rem;
+	font-family:sans-serif;
+	opacity:0.67;
 }
 #editor.block-editor__container .edit-post-visual-editor .editor-post-title__block > div {
 	outline: 1px solid rgba(145, 151, 162, 0.2);
@@ -73,13 +84,13 @@
 	border-bottom: 1px dashed #e5e5e5;
 }
 #editor.block-editor__container .editor-block-list__layout:after, #editor.block-editor__container .editor-block-list__layout:before {
-	content: "page content";
+	content: "content";
 	position: relative;
 	bottom: 0;
 	right: 0;
 	font-family: sans-serif;
 	font-size: 0.7em;
-	color: #aaa;
+	color: #767676;
 }
 .block-editor-page #editor.block-editor__container .editor-block-list__layout:after {
 	content: "page content above here";
@@ -153,109 +164,204 @@
 
 /* Visible labels for blocks */
 .editor-block-list__block:after {
+	content: "Custom Block";
+	color:#767676;
 	position:absolute;
 	top:0;
-	left: -7.25rem;
-	width: 5rem;
+	left: -6.25rem;
+	width: 3.5rem;
 	text-align: right;
 	font-size:0.67rem;
 	font-family:sans-serif;
 	opacity:0.67;
+	line-height: 1.2;
 }
 .editor-block-list__block[data-type="core/paragraph"]:after {
-	content:"Paragraph";
+	content:"Paragraph Block";
 }
 .editor-block-list__block[data-type="core/quote"]:after {
-	content:"Quote";
+	content:"Quote Block";
 }
 .editor-block-list__block[data-type="core/image"]:after {
-	content:"Image";
+	content:"Image Block";
 }
 .editor-block-list__block[data-type="core/heading"]:after {
-	content:"Heading";
+	content:"Heading Block";
 }
 .editor-block-list__block[data-type="core/gallery"]:after {
-	content:"Gallery";
+	content:"Gallery Block";
 }
 .editor-block-list__block[data-type="core/list"]:after {
-	content:"List";
+	content:"List Block";
 }
 .editor-block-list__block[data-type="core/audio"]:after {
-	content:"Audio";
+	content:"Audio Block";
 }
 .editor-block-list__block[data-type="core/cover"]:after {
-	content:"Cover";
+	content:"Cover Block";
 }
 .editor-block-list__block[data-type="core/file"]:after {
-	content:"File";
+	content:"File Block";
 }
 .editor-block-list__block[data-type="core/video"]:after {
-	content:"Video";
+	content:"Video Block";
 }
 .editor-block-list__block[data-type="core/code"]:after {
-	content:"Code";
+	content:"Code Block";
 }
 .editor-block-list__block[data-type="core/classic"]:after {
-	content:"Classic";
+	content:"Classic Block";
 }
 .editor-block-list__block[data-type="core/html"]:after {
-	content:"Custom HTML";
+	content:"Custom HTML Block";
 }
 .editor-block-list__block[data-type="core/preformatted"]:after {
-	content:"Preformatted";
+	content:"Preformatted Block";
 }
 .editor-block-list__block[data-type="core/pullquote"]:after {
-	content:"Pullquote";
+	content:"Pullquote Block";
 }
 .editor-block-list__block[data-type="core/table"]:after {
-	content:"Table";
+	content:"Table Block";
 }
 .editor-block-list__block[data-type="core/verse"]:after {
-	content:"Verse";
+	content:"Verse Block";
 }
 .editor-block-list__block[data-type="core/button"]:after {
-	content:"Button";
+	content:"Button Block";
 }
 .editor-block-list__block[data-type="core/columns"]:after {
-	content:"Columns";
+	content:"Columns Block";
 }
 .editor-block-list__block[data-type="core/media-text"]:after {
-	content:"Media & Text";
+	content:"Media & Text Block";
 }
 .editor-block-list__block[data-type="core/more"]:after {
-	content:"More";
+	content:"More Block";
 }
 .editor-block-list__block[data-type="core/page-break"]:after {
-	content:"Page Break";
+	content:"Page Break Block";
 }
 .editor-block-list__block[data-type="core/spacer"]:after {
-	content:"Spacer";
+	content:"Spacer Block";
 }
 .editor-block-list__block[data-type="core/shortcode"]:after {
-	content:"Shortcode";
+	content:"Shortcode Block";
 }
 .editor-block-list__block[data-type="core/archives"]:after {
-	content:"Archives";
+	content:"Archives Block";
 }
 .editor-block-list__block[data-type="core/calendar"]:after {
-	content:"Calendar";
+	content:"Calendar Block";
 }
 .editor-block-list__block[data-type="core/categories"]:after {
-	content:"Categories";
+	content:"Categories Block";
 }
 .editor-block-list__block[data-type="core/latest-comments"]:after {
-	content:"Latest Comments";
+	content:"Latest Comments Block";
 }
 .editor-block-list__block[data-type="core/latest-posts"]:after {
-	content:"Latest Posts";
+	content:"Latest Posts Block";
 }
 .editor-block-list__block[data-type="core/rss"]:after {
-	content:"RSS";
+	content:"RSS Block";
 }
 .editor-block-list__block[data-type="core/search"]:after {
-	content:"Search";
+	content:"Search Block";
 }
 .editor-block-list__block[data-type="core/tag-cloud"]:after {
-	content:"Tag Cloud";
+	content:"Tag Cloud Block";
 }
-
+.editor-block-list__block[data-type="core/embed"]:after {
+	content:"Embed Block";
+}
+.editor-block-list__block[data-type="core-embed/twitter"]:after {
+	content:"Twitter Block";
+}
+.editor-block-list__block[data-type="core-embed/youtube"]:after {
+	content:"YouTube Block";
+}
+.editor-block-list__block[data-type="core-embed/facebook"]:after {
+	content:"Facebook Block";
+}
+.editor-block-list__block[data-type="core-embed/instagram"]:after {
+	content:"Instagram Block";
+}
+.editor-block-list__block[data-type="core-embed/wordpress"]:after {
+	content:"WordPress Block";
+}
+.editor-block-list__block[data-type="core-embed/soundcloud"]:after {
+	content:"Soundcloud Block";
+}
+.editor-block-list__block[data-type="core-embed/spotify"]:after {
+	content:"Spotify Block";
+}
+.editor-block-list__block[data-type="core-embed/flickr"]:after {
+	content:"Flickr Block";
+}
+.editor-block-list__block[data-type="core-embed/vimeo"]:after {
+	content:"Vimeo Block";
+}
+.editor-block-list__block[data-type="core-embed/animoto"]:after {
+	content:"Animoto Block";
+}
+.editor-block-list__block[data-type="core-embed/cloudup"]:after {
+	content:"CloudUp Block";
+}
+.editor-block-list__block[data-type="core-embed/collegehumor"]:after {
+	content:"CollegeHumor Block";
+}
+.editor-block-list__block[data-type="core-embed/imgur"]:after {
+	content:"Imgur Block";
+}
+.editor-block-list__block[data-type="core-embed/issuu"]:after {
+	content:"Issuu Block";
+}
+.editor-block-list__block[data-type="core-embed/hulu"]:after {
+	content:"Hulu Block";
+}
+.editor-block-list__block[data-type="core-embed/kickstarter"]:after {
+	content:"Kickstarter Block";
+}
+.editor-block-list__block[data-type="core-embed/meetup"]:after {
+	content:"Meetup.com Block";
+}
+.editor-block-list__block[data-type="core-embed/mixcloud"]:after {
+	content:"Mixcloud Block";
+}
+.editor-block-list__block[data-type="core-embed/reddit"]:after {
+	content:"Reddit Block";
+}
+.editor-block-list__block[data-type="core-embed/reverbnation"]:after {
+	content:"ReverbNation Block";
+}
+.editor-block-list__block[data-type="core-embed/screencast"]:after {
+	content:"Screencast Block";
+}
+.editor-block-list__block[data-type="core-embed/scribd"]:after {
+	content:"Scribd Block";
+}
+.editor-block-list__block[data-type="core-embed/slideshare"]:after {
+	content:"Slideshare Block";
+}
+.editor-block-list__block[data-type="core-embed/smugmug"]:after {
+	content:"SmugMug Block";
+}
+.editor-block-list__block[data-type="core-embed/speaker-deck"]:after {
+	content:"Speaker Deck Block";
+}
+.editor-block-list__block[data-type="core-embed/ted"]:after {
+	content:"TED Block";
+}
+.editor-block-list__block[data-type="core-embed/tumblr"]:after {
+	content:"Tunblr Block";
+}
+.editor-block-list__block[data-type="core-embed/videopress"]:after {
+	content:"VideoPress Block";
+}
+.editor-block-list__block[data-type="core-embed/wordpress-tv"]:after {
+	content:"WordPress.tv Block";
+}
+.editor-block-list__block[data-type="core-embed/amazon-kindle"]:after {
+	content:"Amazon Kindle" Block";
+}
