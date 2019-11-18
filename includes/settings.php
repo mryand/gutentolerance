@@ -86,23 +86,23 @@ function gutentolerance_field_suppress_preview_cb( $args ) {
 }
 
 /**
- * top level menu
+ * register our gutentolerance_options_page to the admin_menu action hook
+ */
+add_action( 'admin_menu', 'gutentolerance_options_page' );
+
+/**
+ * settings menu
  */
 function gutentolerance_options_page() {
     // add top level menu page
-    add_menu_page(
-        'GutenTolerance',
-        'GutenTolerance Options',
+    add_options_page(
+        __( 'GutenTolerance Options', 'guten-tolerance' ),
+        __( 'GutenTolerance', 'guten-tolerance' ),
         'manage_options',
         'gutentolerance',
         'gutentolerance_options_page_html'
     );
 }
-
-/**
- * register our gutentolerance_options_page to the admin_menu action hook
- */
-add_action( 'admin_menu', 'gutentolerance_options_page' );
 
 /**
  * top level menu:
