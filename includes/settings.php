@@ -24,7 +24,7 @@ function gutentolerance_settings_init() {
     add_settings_field(
         'gutentolerance_field_suppress_preview', // as of WP 4.6 this value is used only internally
         // use $args' label_for to populate the id inside the callback
-        __( 'Suppress Preview', 'gutentolerance' ),
+        __( 'Hide Preview Button', 'gutentolerance' ),
         'gutentolerance_field_suppress_preview_cb',
         'gutentolerance',
         'gutentolerance_section_developers',
