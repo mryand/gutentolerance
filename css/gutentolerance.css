@@ -176,6 +176,14 @@
 	opacity:0.67;
 	line-height: 1.2;
 }
+.editor-block-list__block[data-align="left"]:after {
+	top: 3.5rem;
+}
+.editor-block-list__block[data-align="right"]:after {
+	left:auto;
+	right: -6.25rem;
+	text-align:left;
+}
 .editor-block-list__block[data-type="core/paragraph"]:after {
 	content:"Paragraph Block";
 }
