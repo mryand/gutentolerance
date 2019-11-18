@@ -45,7 +45,7 @@
 	padding: 0 0.5em;
 	letter-spacing: 0.08em;
 	z-index: 0; */
-	
+
 	content: "Title";
 	color: #767676;
 	position:absolute;
@@ -209,7 +209,7 @@
 .editor-block-list__block[data-type="core/code"]:after {
 	content:"Code Block";
 }
-.editor-block-list__block[data-type="core/classic"]:after {
+.editor-block-list__block[data-type="core/freeform"]:after {
 	content:"Classic Block";
 }
 .editor-block-list__block[data-type="core/html"]:after {
@@ -272,6 +272,15 @@
 .editor-block-list__block[data-type="core/tag-cloud"]:after {
 	content:"Tag Cloud Block";
 }
+.editor-block-list__block[data-type="core/separator"]:after {
+	content:"Separator Block";
+}
+.editor-block-list__block[data-type="core/group"]:after {
+	content:"Group Block";
+}
+.editor-block-list__block[data-type="core/nextpage"]:after {
+	content:"Page Break Block";
+}
 .editor-block-list__block[data-type="core/embed"]:after {
 	content:"Embed Block";
 }
@@ -323,7 +332,7 @@
 .editor-block-list__block[data-type="core-embed/kickstarter"]:after {
 	content:"Kickstarter Block";
 }
-.editor-block-list__block[data-type="core-embed/meetup"]:after {
+.editor-block-list__block[data-type="core-embed/meetup-com"]:after {
 	content:"Meetup.com Block";
 }
 .editor-block-list__block[data-type="core-embed/mixcloud"]:after {
@@ -363,5 +372,11 @@
 	content:"WordPress.tv Block";
 }
 .editor-block-list__block[data-type="core-embed/amazon-kindle"]:after {
-	content:"Amazon Kindle" Block";
+	content:"Amazon Kindle Block";
+}
+.editor-block-list__block[data-type="core-embed/crowdsignal"]:after {
+	content:"Crowdsignal Block";
+}
+.editor-block-list__block[data-type="core-embed/dailymotion"]:after {
+	content:"Crowdsignal Block";
 }
