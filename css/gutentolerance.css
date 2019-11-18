@@ -127,10 +127,12 @@
 /* Clarify the "Document" label on the right-column tab in the Admin UI */
 .block-editor-page .edit-post-sidebar__panel-tab[data-label="Document"]:before {
 	content: "Page/";
+	position: relative;
 }
 
 .block-editor-post .edit-post-sidebar__panel-tab[data-label="Document"]:before {
 	content: "Post/";
+	position: relative;
 }
 
 /* Label the toolbar actions */
