@@ -2,7 +2,7 @@
 /**
  * Plugin Name: GutenTolerance
  * Description: Improves the Gutenberg authoring experience
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Matt Ryan
  * Author URI: https://empatheticinterfaces.com
  */
