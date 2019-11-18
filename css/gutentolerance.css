@@ -1,16 +1,17 @@
 
 /* Hide the "Preview" button */
-#editor.block-editor__container .editor-inserter-with-shortcuts, #editor.block-editor__container .editor-post-preview.is-button {
+.gutentolerance-suppress-preview--yes #editor.block-editor__container .editor-inserter-with-shortcuts, .gutentolerance-suppress-preview--yes  #editor.block-editor__container .editor-post-preview.is-button {
 	display: none !important;
 }
 
+/* Relabel "Author" to "Posted By" since in the real world the person who posts it is often not the person who wrote it */
 #editor.block-editor__container .components-panel__row label[for^="post-author-selector"] {
 	color: transparent;
 	display: inline-block;
 }
 
 /* convert "Author" label to "Posted By" */
-#editor.block-editor__container .components-panel__row label[for^="post-author-selector"]&:before {
+#editor.block-editor__container .components-panel__row label[for^="post-author-selector"]:before {
 	position: relative;
 	left: 0;
 	color: #555d66;
